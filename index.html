@@ -1,0 +1,55 @@
+﻿<html>
+<head lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="Test-1.js" language="JavaScript"></script>
+    <style>
+        .liquidFillGaugeText {
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="background-color:#333">
+    <div class="col-lg-12">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6">
+            <ul class="nav nav-pills">
+                <li id="Home" role="presentation" class="active"><a href="#">Home</a></li>
+                <li id="Profile" role="presentation"><a href="#">Profile</a></li>
+                <li id="Resume" role="presentation"><a href="#">Messages</a></li>
+                <li id="charts" role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Visualization Charts <span class="caret"></span>
+                    </a>
+                    <ul id="chartmenu" class="dropdown-menu">
+                        <li><a id="Fluidchart" href="#bubch">Fluid Chart</a></li>
+                        <li><a id="barchart" href="#barch">Bar Chart</a></li>
+                        <li><a id="Otherchart" href="#">Other Chart</a></li>
+                        <li><a id="samplechart" href="#">Sample Chart</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+    <div id="ChartType">
+
+    </div>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            $('#chartmenu').bind("click", function (params) {
+                debugger;
+                selectchartype(params.target.id)
+            })
+        })
+    </script>
+
+</body>
+</html>
