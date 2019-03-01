@@ -12,20 +12,68 @@
             font-family: Helvetica;
             font-weight: bold;
         }
+        .nav-row-custom {
+            padding-top: 1%;
+            background: #212529;
+            padding-bottom: 1%;
+            height:13%;
+
+        }
+        .customimage{
+            border-radius:50% !important
+        }
+        .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+            background-color: cornflowerblue !important;
+            color:white !important;
+            font-family:Courier New, Courier, monospace;
+            font-weight:bolder
+        }
+        a {
+            color: cornflowerblue;
+            font-family: Courier New, Courier, monospace;
+            font-weight: bolder
+        }
+        .custompadding{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            height:87%
+        }
+    .irc_mi { background-image: url('https://akshaykurapaty.github.io/apple-mouse-artificial-flowers-blurred-background-1229861.jpg'); height: 87%; background-position: center; background-repeat: no-repeat; background-size: cover; filter: blur(2px); -webkit-filter: blur(2px); }
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+        .mainimage {
+            width: auto;
+            max-width: 14%;
+            height: auto;
+        }
     </style>
 </head>
-<body style="background-color:#333">
-    <div class="col-lg-12">
-        <div class="col-lg-3">
+<body style="background-color:white !important">
+    <div class="col-lg-12 nav-row-custom">
+        <div class="col-lg-4">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
             <ul class="nav nav-pills">
                 <li id="Home" role="presentation" class="active"><a href="#">Home</a></li>
                 <li id="Profile" role="presentation"><a href="#">Profile</a></li>
-                <li id="Resume" role="presentation"><a href="#">Messages</a></li>
+                <li id="Resume" role="presentation"><a href="#">Projects</a></li>
                 <li id="charts" role="presentation" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Visualization Charts <span class="caret"></span>
+                        Contact <span class="caret"></span>
                     </a>
                     <ul id="chartmenu" class="dropdown-menu">
                         <li><a id="Fluidchart" href="#bubch">Fluid Chart</a></li>
@@ -38,6 +86,18 @@
         </div>
         <div class="col-lg-3">
         </div>
+    </div>
+    <div class="col-lg-12 custompadding irc_mi">
+
+        <!--<img src="C:\Users\aksha\OneDrive\Documents\Purdue\E - learning\Visualizations\picture.jpg" />-->
+    </div>
+    <div class="bg-text">
+        <img class="mainimage" src="https://akshaykurapaty.github.io/picture.jpg" />
+        <h4>I'M AKSHAY KURAPATY</h4>
+        <p style="color:cornflowerblue;font-size:small;font-family:Courier New, Courier, monospace;font-weight:bolder">Data Scientist / Programmer</p>
+        <p style="color:cornflowerblue;font-size:small; font-family:Courier New, Courier, monospace">A C T I V E L Y &nbsp  L O O K I N G &nbsp F O R  &nbsp  F U L L - T I M E </p>
+
+
     </div>
     <div id="ChartType">
 
