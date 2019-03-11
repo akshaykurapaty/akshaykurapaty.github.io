@@ -270,7 +270,6 @@ function BindDynamichtmlforcharts() {
         '<svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>' +
         '<svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>' +
         '<svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>';
-    debugger;
     $('#ChartType').html(DynamicHTML);
     return true;
 }
@@ -348,5 +347,72 @@ function selectchartype(typeofchart) {
     }
     else if (typeofchart == "barchart") {
         $('#ChartType').html(" ")
+    }
+}
+function selectmenu(id) {
+    debugger;
+    if (id == "protfolio") {
+        //Do something
+    }
+    else if (id == "profile") {
+        //     do something
+        BindProfile();
+    }
+    else if (id = "home") {
+        BindHomePage();
+        //Do something else
+    }
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function BindHomePage() {
+    $('#ContentDiv').hide(1000)
+    await sleep(1000);
+    $('#ContentDiv').html(" ")
+    DynamicHTML = '<div class="col-lg-12 custompadding irc_mi">'+
+
+//        <!--<img src="C:\Users\aksha\OneDrive\Documents\Purdue\E - learning\Visualizations\picture.jpg" />-->
+  '</div>'+
+        ' <div class="bg-text">'+
+        '   <img class="mainimage" src="https://akshaykurapaty.github.io/picture.jpg" />' +
+        '  <h4 style = "font-family:nunito sans,Helvetica,sans-serif;">I\'M AKSHAY KURAPATY</h4>' +
+        '   <p style="color:#FFFFFF;font-size:small;font-family:nunito sans,Helvetica,sans-serif;font-weight:bolder">Data Scientist / Consultant / Programmer</p>' +
+
+
+        '</div>'
+    $('#ContentDiv').html(DynamicHTML)
+    $('#ContentDiv').show(1000)
+}
+
+async function BindProfile() {
+    try {
+        $('#ContentDiv').hide(1000)
+        await sleep(1000);
+        $('#ContentDiv').html(" ")
+        Dynamichtml = '<div class="col-lg-4" style="margin-top:2%">'+
+            '<img class="subimage" style="border-radius: 50%;" src="https://akshaykurapaty.github.io/PP.jpg"/>' +
+        '        </div>' +
+            '           <div class="col-lg-1"></div>' +
+            '          <div class="col-lg-6" style="margin-top:5%; text-align:justify;font-family:sans-serif;font-weight:600">' +
+            '             <p style="word-wrap: break-word;">' +
+            '                Hi I\'m <a> Akshay Kurapaty</a>, I graduated as a computer science engineer from one of India\'s leading engineering institutes.My fascination with technology that has transformed lives over the years and the fact that technology evolves from a quest to meet social and business needs stands obvious to me.My proclivity towards understanding analytics began when, for my UG Project, I worked on data - mining algorithms and proposed a thesis on their usability for constructing predictive models.'+
+            '       </p>' +
+            '          <p>' +
+            '             After my graduation, I worked for <a>3 years</a> as a Data Scientist at <a href="https://www2.deloitte.com/us/en.html">Deloitte</a>, which enthused me for the tremendous prospects offered, from being able to work with global clients and to receive mentoring from some of elite leaders in the industry. I was a part of the <a>advanced analytics team </a> built from a hand-picked group, which performs complex analytics and builds predictive models to solve business problems. However, as I advanced through my career across challenging assignments, I  believed that a classroom training would help me broaden my skillset to propel my career in this field.' +
+            '    </p>' +
+            '       <p>' +
+            '          Right now, I am pursuing Master\'s Degree in <a href="https://krannert.purdue.edu/masters/programs/business-analytics-and-information-management/">Business Analytics</a> at <a href="https://www.purdue.edu/">Purdue University</a>. This Degree will help me understand what kind of parameters to probe for based on the business case at hand whereas, business centric course strcture will hone my business perspective.' +
+            ' </p>' +
+            '</div>' +
+            '<div class="col-lg-1">' +
+
+            '</div>' 
+        $('#ContentDiv').html(Dynamichtml);
+        $('#ContentDiv').show(1000)
+    }
+    catch (e) {
+        console.log("An exception occured : "+e)
     }
 }

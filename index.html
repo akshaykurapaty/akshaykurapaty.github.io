@@ -22,15 +22,18 @@
         .customimage{
             border-radius:50% !important
         }
+        .nav-pills > li > a
+        {
+            color:white
+        }
         .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-            background-color: cornflowerblue !important;
-            color:white !important;
-            font-family:Courier New, Courier, monospace;
-            font-weight:bolder
+            background-color: #53b6d0 !important;
+            color: white !important;
+            font-family: nunito sans,Helvetica,sans-serif;
+            font-weight: bolder
         }
         a {
-            color: cornflowerblue;
-            font-family: Courier New, Courier, monospace;
+            color: #53b6d0;
             font-weight: bolder
         }
         .custompadding{
@@ -38,7 +41,7 @@
             padding-right: 0px !important;
             height:87%
         }
-    .irc_mi { background-image: url('https://akshaykurapaty.github.io/apple-mouse-artificial-flowers-blurred-background-1229861.jpg'); height: 87%; background-position: center; background-repeat: no-repeat; background-size: cover; filter: blur(2px); -webkit-filter: blur(2px); }
+    .irc_mi { background-image: url('https://akshaykurapaty.github.io/BackgroundPicture.jpg'); height: 87%; background-position: center; background-repeat: no-repeat; background-size: cover; filter: blur(2px); -webkit-filter: blur(2px); }
         .bg-text {
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -60,6 +63,10 @@
             max-width: 14%;
             height: auto;
         }
+        .subimage {
+            object-fit: cover;
+            width: 100%
+        }
     </style>
 </head>
 <body style="background-color:white !important">
@@ -67,41 +74,22 @@
         <div class="col-lg-4">
         </div>
         <div class="col-lg-5">
-            <ul class="nav nav-pills">
-                <li id="Home" role="presentation" class="active"><a href="#">Home</a></li>
-                <li id="Profile" role="presentation"><a href="#">Profile</a></li>
-                <li id="Resume" role="presentation"><a href="#">Projects</a></li>
-                <li id="charts" role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Contact <span class="caret"></span>
-                    </a>
-                    <ul id="chartmenu" class="dropdown-menu">
-                        <li><a id="Fluidchart" href="#bubch">Fluid Chart</a></li>
-                        <li><a id="barchart" href="#barch">Bar Chart</a></li>
-                        <li><a id="Otherchart" href="#">Other Chart</a></li>
-                        <li><a id="samplechart" href="#">Sample Chart</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <ul id="Mainheader" class="nav nav-pills nav-justified">
+                <li id="Home" class="active"><a id="home" data-toggle="tab" href="#12">Home</a></li>
+                <li id="Profile"><a id="profile" data-toggle="tab" href="#1">Profile</a></li>
+                <li id="Protfolio"><a id="protfolio" data-toggle="tab" href="#2">Protfolio</a></li>
+             </ul>
         </div>
         <div class="col-lg-3">
         </div>
     </div>
-    <div class="col-lg-12 custompadding irc_mi">
-
-        <!--<img src="C:\Users\aksha\OneDrive\Documents\Purdue\E - learning\Visualizations\picture.jpg" />-->
-    </div>
-    <div class="bg-text">
-        <img class="mainimage" src="https://akshaykurapaty.github.io/picture.jpg" />
-        <h4>I'M AKSHAY KURAPATY</h4>
-        <p style="color:cornflowerblue;font-size:small;font-family:Courier New, Courier, monospace;font-weight:bolder">Data Scientist / Programmer</p>
-        <p style="color:cornflowerblue;font-size:small; font-family:Courier New, Courier, monospace">A C T I V E L Y &nbsp  L O O K I N G &nbsp F O R  &nbsp  F U L L - T I M E </p>
-
+    <div id="ContentDiv" style="display:none">
 
     </div>
     <div id="ChartType">
 
     </div>
+
     <script language="JavaScript">
         $(document).ready(function () {
             $('#chartmenu').bind("click", function (params) {
@@ -109,6 +97,12 @@
                 selectchartype(params.target.id)
             })
         })
+        $('#Mainheader').bind('click', function (params) {
+            debugger;
+            selectmenu(params.target.id)
+        });
+        debugger;
+        selectmenu("home")
     </script>
 
 </body>
