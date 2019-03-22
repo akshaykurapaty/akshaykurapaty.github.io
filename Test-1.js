@@ -427,7 +427,7 @@ async function BindProtfolio() {
         '        <div class="flip-card">' +
         '           <div class="flip-card-inner">' +
         '              <div class="flip-card-front">' +
-        '                 <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\airpollution.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '                 <img src="https://akshaykurapaty.github.io/airpollution.jpg" style="width:100%;height:100%" alt="Avatar">' +
         '                    <div class="centered" style="color:white;font-weight:700">Investigation of PM2.5 (Regression techniques)</div>' +
         '               </div>' +
         '              <div class="flip-card-back">' +
@@ -444,7 +444,7 @@ async function BindProtfolio() {
         '    <div class="flip-card">' +
         '       <div class="flip-card-inner">' +
         '          <div class="flip-card-front">' +
-        '             <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\textimage.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '             <img src="https://akshaykurapaty.github.io/textimage.jpg" style="width:100%;height:100%" alt="Avatar">' +
         '                <div class="centered" style="color:white;font-weight:700">Ad classification using Text and Image</div>' +
         '       </div>' +
         '          <div class="flip-card-back">' +
@@ -461,7 +461,7 @@ async function BindProtfolio() {
         '    <div class="flip-card">' +
         '       <div class="flip-card-inner">' +
         '          <div class="flip-card-front">' +
-        '             <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\R.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '             <img src="https://akshaykurapaty.github.io/R.jpg" style="width:100%;height:100%" alt="Avatar">' +
         '                <div class="centered" style="color:white;font-weight:700">R-Package for Birch Clustering</div>' +
         '   </div>' +
         '          <div class="flip-card-back">' +
