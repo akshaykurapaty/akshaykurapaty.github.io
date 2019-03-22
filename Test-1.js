@@ -350,9 +350,9 @@ function selectchartype(typeofchart) {
     }
 }
 function selectmenu(id) {
-    debugger;
     if (id == "protfolio") {
         //Do something
+        BindProtfolio()
     }
     else if (id == "profile") {
         //     do something
@@ -360,6 +360,7 @@ function selectmenu(id) {
     }
     else if (id = "home") {
         BindHomePage();
+       // BindBirchRPackage()
         //Do something else
     }
 }
@@ -379,8 +380,6 @@ async function BindHomePage() {
         '   <img class="mainimage" src="https://akshaykurapaty.github.io/picture.jpg" />' +
         '  <h4 style = "font-family:nunito sans,Helvetica,sans-serif;">I\'M AKSHAY KURAPATY</h4>' +
         '   <p style="color:#FFFFFF;font-size:small;font-family:nunito sans,Helvetica,sans-serif;font-weight:bolder">Data Scientist / Consultant / Programmer</p>' +
-
-
         '</div>'
     $('#ContentDiv').html(DynamicHTML)
     $('#ContentDiv').show(1000)
@@ -415,4 +414,125 @@ async function BindProfile() {
     catch (e) {
         console.log("An exception occured : "+e)
     }
+}
+
+async function BindProtfolio() {
+    $('#ContentDiv').hide(1000)
+    await sleep(1000);
+    $('#ContentDiv').html(" ")
+    Dynamichtml = "";
+    Dynamichtml = '        <div class="col-lg-12">'+
+    ' <div style = "margin-left:7%">' +
+        '     <div class="col-lg-3 custompadding customflip" style="margin-top:1%">' +
+        '        <div class="flip-card">' +
+        '           <div class="flip-card-inner">' +
+        '              <div class="flip-card-front">' +
+        '                 <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\airpollution.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '                    <div class="centered" style="color:white;font-weight:700">Investigation of PM2.5 (Regression techniques)</div>' +
+        '               </div>' +
+        '              <div class="flip-card-back">' +
+        '                 <h3>Investigation of PM2.5</h3>' +
+        '                <p>Determine factors that affect pollution index</p>' +
+        '               <button id="multipleregression" style="background-color:black"><i class="fa fa-search"></i>Explore</button>' +
+        '          </div>' +
+        '     </div>' +
+        '</div>' +
+        ' </div>' +
+        ' <div class="col-lg-1"></div>' +
+    ' <div class="col-lg-3 custompadding customflip" style="margin-top:1%">'+
+        '    <div class="flip-card">' +
+        '    <div class="flip-card">' +
+        '       <div class="flip-card-inner">' +
+        '          <div class="flip-card-front">' +
+        '             <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\textimage.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '                <div class="centered" style="color:white;font-weight:700">Ad classification using Text and Image</div>' +
+        '       </div>' +
+        '          <div class="flip-card-back">' +
+        '             <h3>Ad Classification on Craigslist</h3>' +
+        '            <p>NLP Models and  Convolutional Neural Networks</p>' +
+        '           <button style="background-color:black"><i class="fa fa-search"></i>Explore</button>' +
+        '      </div>' +
+        ' </div>' +
+        ' </div>' +
+        ' </div>' +
+        ' </div>' +
+        '<div class="col-lg-1"></div>' +
+        ' <div class="col-lg-3 custompadding customflip" style="margin-top:1%">' +
+        '    <div class="flip-card">' +
+        '       <div class="flip-card-inner">' +
+        '          <div class="flip-card-front">' +
+        '             <img src="C:\\Users\\aksha\\OneDrive\\Documents\\Purdue\\E - learning\\Visualizations\\R.jpg" style="width:100%;height:100%" alt="Avatar">' +
+        '                <div class="centered" style="color:white;font-weight:700">R-Package for Birch Clustering</div>' +
+        '   </div>' +
+        '          <div class="flip-card-back">' +
+        '             <h3>Birch Clustering Package for R</h3>' +
+        '            <p>Used Reccursive balanced Trees to create a clustering algorithm in R</p>' +
+        '           <button id="Birch" style="background-color:black"><i class="fa fa-search"></i>Explore</button>' +
+        '      </div>' +
+        ' </div>' +
+        '</div' +
+        '</div>' +
+        ' </div>' +
+               ' </div>'
+        $('#ContentDiv').html(Dynamichtml);
+    $('#ContentDiv').show(1000)
+    await sleep(1000);
+    $('#multipleregression').bind("click", function (params) {
+        BindMulitpleregression()
+    })
+    $('#Birch').bind("click", function (params) {
+        BindBirchRPackage();
+
+    })
+
+    
+}
+
+function BindMulitpleregression() {
+    $('#ContentDiv').hide(1000);
+    $('#ContentDiv').html("")
+    Dynamichtml = ""
+    Dynamichtml += '<div class="col-lg-12">'
+    Dynamichtml += '<div class="col-lg-1"></div><div class="col-lg-10"><h2 style="text-align:center;font-weight:800">Analysis of Factors influencing PM2.5 level in air</h2></div><div class="col-lg-1"></div></div>'
+    Dynamichtml += "</div>"
+    Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600">'
+    Dynamichtml += '<p><a>Abstract:</a> Air quality is the most severe pollution problem in China due to the rapid industrialization and increasing energy consumption. In Beijing, the PM 2.5 can be higher than 500 in winter, which means the air is toxic for human, especially for children with a relatively vulnerable immune system. Moreover, PM 2.5 is a cross-country problem. It is not limited by borders and is a global issue. Studying the other factors that influence air quality index would help us understand the reason in more detail.</p>'+
+    '<p>This project aims at analyzing how air quality(PM 2.5) can be affected by several weather factors, such as temperature, humanity, wind direction, etc in metropolitan area.The dataset used in this project is PM 2.5 data collected from Beijing, China in three - year period.</p>'+
+        '<p><a>Results:</a> It is found that PM 2.5 is usually higher in winter, but lower in summer.Moreover, analysis noticed that the PM 2.5 varies in different period of one day.We hope we can find the underlying relationship among these weather factors and provide a direction for future study to effectively solve the high PM 2.5 issue for metropolitan area with similar population and energy consumption.</p>'
+   
+    Dynamichtml += '</div><div class="col-lg-1"></div></div>'
+    Dynamichtml += '<div class="col-lg-12"> <div class="col-lg-1"></div>'+
+    '<div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600"><p><a>Technologies Used:</a> Python, Scikit-learn, Numpy, Pandas</p>'+
+    '<p><a>Data Science concepts Used:</a> Imputation, Linear Regression, Multiple Regression, Subset Selection</p></div>'
+    Dynamichtml += '<div class="col-lg-1"></div></div>'
+    Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10"><button id =""><a href="https://github.com/akshaykurapaty/Multiple-Regression" target="_blank" style="color:black"><i class="fa fa-github"></i>Github</a></button></div><div class="col-lg-1"></div></div>'
+    $('#ContentDiv').html(Dynamichtml);
+    $('#ContentDiv').show(1000)
+}
+
+function BindBirchRPackage() {
+    $("ContentDiv").hide(1000);
+    $('#ContentDiv').html(" ")
+    Dynamichtml=""
+    Dynamichtml += '<div class="col-lg-12">'
+    Dynamichtml += '<div class="col-lg-1"></div><div class="col-lg-10"><h2 style="text-align:center;font-weight:800">Birch Clustering Package for R</h2></div><div class="col-lg-1"></div></div>'
+    Dynamichtml += "</div>"
+    Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600">'
+    Dynamichtml += '<p><a>Abstract:</a> Machine learning models are classified into supervised or unsupervised learning. Clustering is a unsupervised machine learning technique that involves grouping similar data points together. Performing cluster analysis is computationally expensive operation. As the clustering deals with unsupervised data, achieving the right cluster groups need multiple data scans to yield optimal solution. In the world where working with gigabytes of data is a norm, there is a dire need to develop algorithms that would yield accurate results with few data scans, that in turn reduces the computational effort. BIRCHR package developed for R is one such algorithm, which uses hierarchical tree-based algorithms to get the clusters. The key challenge in the implementation of this package was to design a work around mechanism to implement trees, as pointers are not supported in R. We used two dimensional lists in collaboration with a recursive algorithm to design self-organizing B-Tree, that always maintains the clusters at the leaf nodes and keeps all the leaf nodes at the same level.</p>' +
+        '<p><a>Results:</a> The clusters formed from the BirchR package are compared with the clusters formed from Birch algorithm from scikit learn library in python. The results proved to be completely similar with the results yielded from python. The cluster analysis has been performed on the cars dataset which is by default available in R and imported to Python to validate the accuracy of clusters.</p>'
+
+    Dynamichtml += '</div><div class="col-lg-1"></div></div>'
+    Dynamichtml += '<div class="col-lg-12"> <div class="col-lg-1"></div>' +
+        '<div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600"><p><a>Technologies Used:</a> R</p>' +
+        '<p><a>Data Science concepts Used: </a>Heirarchial Clustering, 2-D Lists, Tree Data Structure, Recursive Algorithm</p></div>'
+    Dynamichtml += '<div class="col-lg-1"></div></div>'
+    Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10"><button id =""><a href="https://github.com/akshaykurapaty/BIRCHR-Package" target="_blank" style="color:black"><i class="fa fa-github"></i>Github</a></button><button style="margin-left:10px" id ="viewpdf"><a style="color:black"><i class="fa fa-file"></i>View Documentation</a></button></div><div class="col-lg-1"></div></div>'
+    Dynamichtml += '<div id="pdfviewer" class="col-lg-12" style="display:none;padding-top:10px"><object data="https://raw.githubusercontent.com/akshaykurapaty/BIRCHR-Package/0f9c4b7b7cb5d6de2a5d96dc6774145bb779c5b0/BirchR%20Package%20Paper.pdf" style = "width:100%; height:100%;" frameborder = "1" ></object></div>';
+    $('#ContentDiv').html(Dynamichtml);
+    $('#ContentDiv').show(1000)
+    $('#viewpdf').bind("click", function (params) {
+
+        $('#pdfviewer').show(10)
+    })
+
 }
