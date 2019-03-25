@@ -450,7 +450,7 @@ async function BindProtfolio() {
         '          <div class="flip-card-back">' +
         '             <h3>Ad Classification on Craigslist</h3>' +
         '            <p>NLP Models and  Convolutional Neural Networks</p>' +
-        '           <button style="background-color:black"><i class="fa fa-search"></i>Explore</button>' +
+        '           <button id="nlp" style="background-color:black"><i class="fa fa-search"></i>Explore</button>' +
         '      </div>' +
         ' </div>' +
         ' </div>' +
@@ -483,6 +483,9 @@ async function BindProtfolio() {
     $('#Birch').bind("click", function (params) {
         BindBirchRPackage();
 
+    })
+    $('#nlp').bind("click", function (params) {
+        BindNLPProject()
     })
 
     
@@ -535,4 +538,29 @@ function BindBirchRPackage() {
         $('#pdfviewer').show(10)
     })
 
+}
+
+function BindNLPProject() {
+    try {
+        $('#ContentDiv').hide(1000);
+       
+        Dynamichtml = ""
+        Dynamichtml += '<div class="col-lg-12">'
+        Dynamichtml += '<div class="col-lg-1"></div><div class="col-lg-10"><h2 style="text-align:center;font-weight:800">Classification of Ad\'s on craigslist (Text and Image)</h2></div><div class="col-lg-1"></div></div>'
+        Dynamichtml += "</div>"
+        Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600">'
+        Dynamichtml += '<p><a>Abstract:</a> Craigslist is an American classified advertisements website with sections devoted to jobs, housing, for sale, items wanted, services, community, gigs, resumes, and discussion forums. As the description suggests, Craigslist is used by a growing number of the populous to peruse through advertisements and buy products or services(jobs).These advertisements are posted by individual users without any oversight from administration.This entails that the user has the authority to classify the advertisements.</p><p>This Project endeavors to make a tool that would predict the misclassification of errors when a user posts a new advertisement and sorts the ad posted into appropriate bucket.</p>' 
+        Dynamichtml += '</div><div class="col-lg-1"></div></div>'
+        Dynamichtml += '<div class="col-lg-12"> <div class="col-lg-1"></div>' +
+            '<div class="col-lg-10" style="text-align:justify;font-family:sans-serif;font-weight:600"><p><a>Technologies Used:</a> Python, Scikit-learn, Numpy, Pandas, NLTK</p>' +
+            '<p><a>Data Science concepts Used:</a> Tokenization, Text Clustering, TF-IDF Vecotrization, Convolutional Neural Networks</p></div>'
+        Dynamichtml += '<div class="col-lg-1"></div></div>'
+        Dynamichtml += '<div class="col-lg-12"><div class="col-lg-1"></div><div class="col-lg-10"><button id =""><a href="https://github.com/akshaykurapaty/Text-and-Image-Analytics" target="_blank" style="color:black"><i class="fa fa-github"></i>Github</a></button></div><div class="col-lg-1"></div></div>'
+        $('#ContentDiv').html("")
+        $('#ContentDiv').html(Dynamichtml);
+        $('#ContentDiv').show(1000)
+    }
+    catch (e) {
+        console.log(e)
+    }
 }
